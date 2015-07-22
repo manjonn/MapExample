@@ -17,20 +17,33 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jud-hV-yDV">
-                                <rect key="frame" x="0.0" y="28" width="600" height="572"/>
+                                <rect key="frame" x="0.0" y="70" width="600" height="530"/>
                                 <connections>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="cLh-hu-liQ"/>
                                 </connections>
                             </mapView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="epk-0l-3UU">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="dSI-M8-WAw"/>
+                                </connections>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="jud-hV-yDV" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="23x-0h-vPL"/>
+                            <constraint firstItem="epk-0l-3UU" firstAttribute="trailing" secondItem="jud-hV-yDV" secondAttribute="trailing" id="8A6-bs-EdR"/>
                             <constraint firstAttribute="trailing" secondItem="jud-hV-yDV" secondAttribute="trailing" id="8NP-SW-G5h"/>
                             <constraint firstItem="jud-hV-yDV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="MpI-D3-MB9"/>
-                            <constraint firstItem="jud-hV-yDV" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="bng-XJ-siR"/>
+                            <constraint firstItem="jud-hV-yDV" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="bng-XJ-siR"/>
+                            <constraint firstItem="epk-0l-3UU" firstAttribute="leading" secondItem="jud-hV-yDV" secondAttribute="leading" id="e0m-2h-tfE"/>
+                            <constraint firstItem="epk-0l-3UU" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="zen-ui-PKk"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="jud-hV-yDV" id="yCC-Uf-4B2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
